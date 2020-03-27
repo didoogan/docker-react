@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t didoogan/docker-react -f Docker.dev .
+  - docker build -t didoogan/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true didoogan/docker-react npm run test
